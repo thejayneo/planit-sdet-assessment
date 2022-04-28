@@ -1,5 +1,6 @@
+# Assuming Fibonacci sequence starting with "0"
+
 def fib_binet(n)
-    # Assuming Fibonacci sequence starting with "0":
     # Utilizing Binet's formula to find the n-th value of the Fibonacci sequence
     phi = (Math.sqrt(5) + 1)/2
     if n.integer?
@@ -12,5 +13,17 @@ def fib_binet(n)
 end
 
 def fib_recurr(n)
-
+    # Via while loop
+    if n.integer?
+        curr_seq = [[0, 1], 2]
+        while curr_seq[1] < n
+            temp = curr_seq[0][0] + curr_seq[0][1]
+            curr_seq[0][0] = curr_seq[0][1]
+            curr_seq[0][1] = temp
+            curr_seq[1] += 1
+        end
+        return curr_seq[0][1]
+    else
+        return "Invalid input"
+    end
 end
