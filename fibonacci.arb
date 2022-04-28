@@ -1,0 +1,6 @@
+def fib(input, alt)
+    if input.integer?
+        
+    else
+        return "Invalid input"
+end
