@@ -3,9 +3,9 @@
 def fib_binet(n)
     # Utilizing Binet's formula to find the n-th value of the Fibonacci sequence
     phi = (Math.sqrt(5) + 1)/2
-    if n.integer?
+    if (n.integer? && n > 0)
         x = (phi**(n-1))/Math.sqrt(5)
-        y = ((-phi)**-(n-1))/Math.sqrt(5)
+        y = ((-phi)** -(n-1))/Math.sqrt(5)
         return (x-y).round()
     else
         return "Invalid input"
@@ -14,15 +14,32 @@ end
 
 def fib_recurr(n)
     # Via while loop
-    if n.integer?
-        curr_seq = [[0, 1], 2]
-        while curr_seq[1] < n
+    if (n.integer? && n > 0)
+        curr_seq = [[0, 1], 1]
+        while curr_seq[1] < n 
             temp = curr_seq[0][0] + curr_seq[0][1]
             curr_seq[0][0] = curr_seq[0][1]
             curr_seq[0][1] = temp
             curr_seq[1] += 1
         end
-        return curr_seq[0][1]
+        return curr_seq[0][0]
+    else
+        return "Invalid input"
+    end
+end
+
+def fib_check(f)
+    # Via Gessel's Theorem
+    if (f.integer? && f >= 0)
+        x = Math.sqrt((5*(f**2))+4)
+        if f > 0
+            y = Math.sqrt((5*(f**2))-4)
+        end
+        if (x - x.floor == 0 || y - y.floor == 0)
+            return "#{f} is a Fibonacci number"
+        else
+            return "#{f} is not a Fibonacci number."
+        end
     else
         return "Invalid input"
     end
