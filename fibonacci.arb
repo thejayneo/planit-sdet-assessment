@@ -1,6 +1,16 @@
-def fib(input, alt)
-    if input.integer?
-        
+def fib_binet(n)
+    # Assuming Fibonacci sequence starting with "0":
+    # Utilizing Binet's formula to find the n-th value of the Fibonacci sequence
+    phi = (Math.sqrt(5) + 1)/2
+    if n.integer?
+        x = (phi**(n-1))/Math.sqrt(5)
+        y = ((-phi)**-(n-1))/Math.sqrt(5)
+        return (x-y).round()
     else
         return "Invalid input"
+    end
+end
+
+def fib_recurr(n)
+
 end
