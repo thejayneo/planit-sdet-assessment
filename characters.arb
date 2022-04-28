@@ -1,5 +1,5 @@
 def char_count(s)
     current_count = Hash.new(0)
-    s.split('').each { |c| current_count[c] =+ 1 }
+    s.downcase.split('').each { |c| current_count[c] =+ 1 }
     return current_count.key(1)
 end
