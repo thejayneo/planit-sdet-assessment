@@ -5,9 +5,9 @@ class JupiterToysTest
     def initialize(driver)
         @driver = driver
         @logger = Logger.new(STDOUT)
-        
-        @driver.manage.timeouts.implicit_wait = 3
+
         @driver.manage.window.maximize
+        @driver.manage.timeouts.implicit_wait = 3
     end
 
     def getDriver
