@@ -4,7 +4,7 @@ require 'webdrivers'
 
 require_relative '../pages/login'
 
-describe 'Access Jupiter Toys site' do
+describe 'Access Jupiter Toys login page' do
     before(:each) do
         @driver = Selenium::WebDriver.for :chrome
     end

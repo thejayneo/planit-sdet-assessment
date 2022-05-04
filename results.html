@@ -281,13 +281,120 @@ a {
 <div class="results">
 <div id="div_group_1" class="example_group passed">
   <dl style="margin-left: 0px;">
-  <dt id="example_group_1" class="passed">Access Jupiter Toys site</dt>
-    <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">successful checkout</span><span class='duration'>7.71332s</span></dd>
+  <dt id="example_group_1" class="passed">Access Jupiter Toys cart page</dt>
+    <script type="text/javascript">moveProgressBar('8.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">button navigates to shop page when cart is empty</span><span class='duration'>4.60274s</span></dd>
+    <script type="text/javascript">moveProgressBar('16.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">adds 2 different items to cart</span><span class='duration'>3.59188s</span></dd>
+    <script type="text/javascript">moveProgressBar('25.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">removes item from cart</span><span class='duration'>3.64932s</span></dd>
+    <script type="text/javascript">moveProgressBar('33.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">empties cart</span><span class='duration'>14.10719s</span></dd>
+    <script type="text/javascript">makeRed('rspec-header');</script>
+    <script type="text/javascript">makeRed('div_group_1');</script>
+    <script type="text/javascript">makeRed('example_group_1');</script>
+    <script type="text/javascript">moveProgressBar('41.6');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">successful checkout</span>
+      <span class="duration">14.54343s</span>
+      <div class="failure" id="failure_1">
+        <div class="message"><pre>  Failure/Error: cart.orderSuccess.text
+
+  Selenium::WebDriver::Error::NoSuchElementError:
+    no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.alert\-success&quot;}
+      (Session info: chrome=100.0.4896.127)
+  # Backtrace:
+  # 	Ordinal0 [0x011C7413+2389011]
+  # 	Ordinal0 [0x01159F61+1941345]
+  # 	Ordinal0 [0x0104C658+837208]
+  # 	Ordinal0 [0x010791DD+1020381]
+  # 	Ordinal0 [0x0107949B+1021083]
+  # 	Ordinal0 [0x010A6032+1204274]
+  # 	Ordinal0 [0x01094194+1130900]
+  # 	Ordinal0 [0x010A4302+1196802]
+  # 	Ordinal0 [0x01093F66+1130342]
+  # 	Ordinal0 [0x0106E546+976198]
+  # 	Ordinal0 [0x0106F456+980054]
+  # 	GetHandleVerifier [0x01379632+1727522]
+  # 	GetHandleVerifier [0x0142BA4D+2457661]
+  # 	GetHandleVerifier [0x0125EB81+569713]
+  # 	GetHandleVerifier [0x0125DD76+566118]
+  # 	Ordinal0 [0x01160B2B+1968939]
+  # 	Ordinal0 [0x01165988+1989000]
+  # 	Ordinal0 [0x01165A75+1989237]
+  # 	Ordinal0 [0x0116ECB1+2026673]
+  # 	BaseThreadInitThunk [0x7664FA29+25]
+  # 	RtlGetAppContainerNamedObjectPath [0x77D57A7E+286]
+  # 	RtlGetAppContainerNamedObjectPath [0x77D57A4E+238]
+  # ./Task_One/pages/cart.rb:62:in `orderSuccess&#39;
+  # ./Task_One/tests/cart_test.rb:55:in `block (2 levels) in &lt;top (required)&gt;&#39;</pre></div>
+        <div class="backtrace"><pre>Backtrace:
+	Ordinal0 [0x011C7413+2389011]
+	Ordinal0 [0x01159F61+1941345]
+	Ordinal0 [0x0104C658+837208]
+	Ordinal0 [0x010791DD+1020381]
+	Ordinal0 [0x0107949B+1021083]
+	Ordinal0 [0x010A6032+1204274]
+	Ordinal0 [0x01094194+1130900]
+	Ordinal0 [0x010A4302+1196802]
+	Ordinal0 [0x01093F66+1130342]
+	Ordinal0 [0x0106E546+976198]
+	Ordinal0 [0x0106F456+980054]
+	GetHandleVerifier [0x01379632+1727522]
+	GetHandleVerifier [0x0142BA4D+2457661]
+	GetHandleVerifier [0x0125EB81+569713]
+	GetHandleVerifier [0x0125DD76+566118]
+	Ordinal0 [0x01160B2B+1968939]
+	Ordinal0 [0x01165988+1989000]
+	Ordinal0 [0x01165A75+1989237]
+	Ordinal0 [0x0116ECB1+2026673]
+	BaseThreadInitThunk [0x7664FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77D57A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77D57A4E+238]
+./Task_One/pages/cart.rb:62:in `orderSuccess&#39;
+./Task_One/tests/cart_test.rb:55:in `block (2 levels) in &lt;top (required)&gt;&#39;</pre></div>
+    <pre class="ruby"><code><span class="linenum">-1</span># Couldn't get snippet for Backtrace:
+<span class="linenum">0</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>7.71636 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "1 example, 0 failures";</script>
+<div id="div_group_2" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_2" class="passed">Access Jupiter Toys contact page</dt>
+    <script type="text/javascript">moveProgressBar('50.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">returns confirmation on form submission</span><span class='duration'>9.13113s</span></dd>
+  </dl>
+</div>
+<div id="div_group_3" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_3" class="passed">Access Jupiter Toys home page</dt>
+    <script type="text/javascript">moveProgressBar('58.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">navigates to shop page</span><span class='duration'>3.48272s</span></dd>
+  </dl>
+</div>
+<div id="div_group_4" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_4" class="passed">Access Jupiter Toys login page</dt>
+    <script type="text/javascript">moveProgressBar('66.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">returns error message on incorrect login</span><span class='duration'>3.47087s</span></dd>
+  </dl>
+</div>
+<div id="div_group_5" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_5" class="passed">Access Jupiter Toys shop page</dt>
+    <script type="text/javascript">moveProgressBar('75.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">has 8 types of products</span><span class='duration'>3.26029s</span></dd>
+    <script type="text/javascript">moveProgressBar('83.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">product Teddy Bear available</span><span class='duration'>3.20617s</span></dd>
+    <script type="text/javascript">moveProgressBar('91.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">adds an item to cart</span><span class='duration'>3.30280s</span></dd>
+    <script type="text/javascript">moveProgressBar('100.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">adds 2 different items to cart</span><span class='duration'>3.34226s</span></dd>
+  </dl>
+</div>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>69.74481 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "12 examples, 1 failure";</script>
 </div>
 </div>
 </body>
