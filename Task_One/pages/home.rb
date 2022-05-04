@@ -1,5 +1,5 @@
 require 'selenium-webdriver'
-require_relative './JupiterToysTest'
+require_relative '../JupiterToysTest'
 
 class HomePage < JupiterToysTest
     def initialize(driver)
@@ -8,5 +8,10 @@ class HomePage < JupiterToysTest
         super(driver)
         @driver.navigate.to @url
         @logger.info("Created#{self.class.name}")
+    end
+
+    def startShopping
+        button = @driver.find_element(class: 'btn-large')
+        button.click()
     end
 end
