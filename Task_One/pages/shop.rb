@@ -36,9 +36,14 @@ class ShopPage < JupiterToysTest
         return $itemPresent
     end
 
-    # def buyProductOne
-    #     $product = @driver.find_elements(class: 'btn-success')
-    #     $product[0].click
-    #     $product[0].click
-    # end
+    def buyProductOne
+        $product = @driver.find_elements(class: 'btn-success')
+        $product[0].click
+    end
+
+    def buyProductTwo
+        $product = @driver.find_elements(class: 'btn-success')
+        $product[1].click
+        $product[1].click
+    end
 end

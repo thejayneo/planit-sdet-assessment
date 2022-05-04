@@ -66,4 +66,19 @@ describe 'Access Jupiter Toys site' do
         $result = products.productAvailable('Smiley Face')
         expect($result).to be(true)
     end
+
+    it 'adds an item to cart' do
+        buy = ShopPage.new(@driver)
+        buy.buyProductOne
+        $cart_count = @driver.find_element(class: 'cart-count')
+        expect($cart_count.text).to eq('1')
+    end
+
+    it 'adds 2 different items to cart' do
+        buy = ShopPage.new(@driver)
+        buy.buyProductOne
+        buy.buyProductTwo
+        $cart_count = @driver.find_element(class: 'cart-count')
+        expect($cart_count.text).to eq('3')
+    end
 end
