@@ -21,49 +21,49 @@ describe 'Access Jupiter Toys site' do
 
     it 'product Teddy Bear available' do
         products = ShopPage.new(@driver)
-        $result = products.product('Teddy Bear')
+        $result = products.productAvailable('Teddy Bear')
         expect($result).to be(true)
     end
 
     it 'product Stuffed Frog available' do
         products = ShopPage.new(@driver)
-        $result = products.product('Stuffed Frog')
+        $result = products.productAvailable('Stuffed Frog')
         expect($result).to be(true)
     end
 
     it 'product Handmade Doll available' do
         products = ShopPage.new(@driver)
-        $result = products.product('Handmade Doll')
+        $result = products.productAvailable('Handmade Doll')
         expect($result).to be(true)
     end
 
     it 'product Fluffy Bunny available' do
         products = ShopPage.new(@driver)
-        $result = products.product('Fluffy Bunny')
+        $result = products.productAvailable('Fluffy Bunny')
         expect($result).to be(true)
     end
 
     it 'product Smiley Bear available' do
         products = ShopPage.new(@driver)
-        $result = products.product('Smiley Bear')
+        $result = products.productAvailable('Smiley Bear')
         expect($result).to be(true)
     end
 
     it 'product Funny Cow available' do
         products = ShopPage.new(@driver)
-        $result = products.product('Funny Cow')
+        $result = products.productAvailable('Funny Cow')
         expect($result).to be(true)
     end
 
     it 'product Valentine Bear available' do
         products = ShopPage.new(@driver)
-        $result = products.product('Valentine Bear')
+        $result = products.productAvailable('Valentine Bear')
         expect($result).to be(true)
     end
 
     it 'product Smiley Face available' do
         products = ShopPage.new(@driver)
-        $result = products.product('Smiley Face')
+        $result = products.productAvailable('Smiley Face')
         expect($result).to be(true)
     end
 end

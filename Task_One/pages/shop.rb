@@ -23,7 +23,7 @@ class ShopPage < JupiterToysTest
         return $products.count()
     end
 
-    def product(productName)
+    def productAvailable(productName)
         $itemPresent = false
         products = productList()
         products.each do |product|
@@ -36,4 +36,9 @@ class ShopPage < JupiterToysTest
         return $itemPresent
     end
 
+    # def buyProductOne
+    #     $product = @driver.find_elements(class: 'btn-success')
+    #     $product[0].click
+    #     $product[0].click
+    # end
 end
