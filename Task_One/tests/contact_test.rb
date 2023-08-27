@@ -1,6 +1,5 @@
 require 'selenium-webdriver'
 require 'rspec'
-require 'webdrivers'
 
 require_relative '../pages/contact'
 
